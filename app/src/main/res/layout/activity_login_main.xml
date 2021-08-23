@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60p"
+        android:layout_weight=".85"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <com.sud.laundry.utils.lab.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sl_shadow_angle="45"
+            app:sl_shadow_color="@color/sh_color"
+            app:sl_shadow_distance="@dimen/px_4.0_dp"
+            app:sl_shadow_radius="@dimen/px_15.0_dp"
+            app:sl_shadowed="true">
+
+            <TextView
+                android:id="@+id/title_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:gravity="center"
+                android:text="@string/app_name"
+                android:textColor="@color/blue_color"
+                android:textSize="@dimen/px_40.0_dp" />
+
+        </com.sud.laundry.utils.lab.ShadowLayout>
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/quicksand_regular"
+            android:gravity="center"
+            android:text="@string/login_text"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/px_13.0_dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/login_next_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/px_20.0_dp"
+            android:layout_marginRight="@dimen/px_20.0_dp"
+            android:layout_marginBottom="@dimen/px_60.0_dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/px_15.0_dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/username_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <com.grocery.utils.lab.ShadowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:sl_shadow_angle="45"
+                        app:sl_shadow_color="@color/sh_color"
+                        app:sl_shadow_distance="@dimen/px_4.0_dp"
+                        app:sl_shadow_radius="@dimen/px_15.0_dp"
+                        app:sl_shadowed="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50.0_dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_background_text"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edit_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:fontFamily="@font/librefranklin_regular"
+                                android:gravity="center|start"
+                                android:hint="@string/hint_mobile_no"
+                                android:inputType="text"
+                                android:paddingLeft="@dimen/px_15.0_dp"
+                                android:singleLine="true"
+                                android:textColor="#000"
+                                android:textColorHint="@color/gray_text"
+                                android:textSize="@dimen/px_16.0_dp" />
+
+                            <ImageView
+                                android:layout_width="@dimen/px_20.0_dp"
+                                android:layout_height="@dimen/px_20.0_dp"
+                                android:layout_marginLeft="@dimen/px_20.0_dp"
+                                android:layout_marginRight="@dimen/px_20.0_dp"
+                                android:src="@drawable/ic_outline_user" />
+
+
+                        </LinearLayout>
+                    </com.grocery.utils.lab.ShadowLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/password_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1">
+
+                    <com.grocery.utils.lab.ShadowLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:sl_shadow_angle="45"
+                        app:sl_shadow_color="@color/sh_color"
+                        app:sl_shadow_distance="@dimen/px_5.0_dp"
+                        app:sl_shadow_radius="@dimen/px_15.0_dp"
+                        app:sl_shadowed="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_50.0_dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_background_text"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/edit_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:fontFamily="@font/librefranklin_regular"
+                                android:gravity="center|start"
+                                android:hint="@string/hint_password"
+                                android:inputType="textPassword"
+                                android:paddingLeft="@dimen/px_15.0_dp"
+                                android:singleLine="true"
+                                android:textColor="#000"
+                                android:textColorHint="@color/gray_text"
+                                android:textSize="@dimen/px_16.0_dp" />
+
+
+                            <ImageView
+                                android:layout_width="@dimen/px_20.0_dp"
+                                android:layout_height="@dimen/px_20.0_dp"
+                                android:layout_marginLeft="@dimen/px_20.0_dp"
+                                android:layout_marginRight="@dimen/px_20.0_dp"
+                                android:src="@drawable/ic_password_green" />
+
+
+                        </LinearLayout>
+                    </com.grocery.utils.lab.ShadowLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/forget_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/librefranklin_bold"
+                android:gravity="right"
+                android:paddingRight="@dimen/px_35.0_dp"
+                android:text="@string/forget_password"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/px_15.0_dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_60.0_dp"
+                android:layout_marginTop="@dimen/px_20.0_dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".54"></View>
+
+                <com.grocery.utils.lab.ShadowLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/px_25.0_dp"
+                    android:layout_weight=".46"
+                    app:sl_shadow_angle="45"
+                    app:sl_shadow_color="@color/sh__login_color"
+                    app:sl_shadow_distance="@dimen/px_4.0_dp"
+                    app:sl_shadow_radius="@dimen/px_5.0_dp"
+                    app:sl_shadowed="true">
+
+                    <LinearLayout
+                        android:id="@+id/next_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bt_gradint_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/px_55.0_dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/next_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/quicksand_bold"
+                                android:gravity="center"
+                                android:text="@string/next"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/px_16.0_dp"
+                                android:textStyle="bold"></TextView>
+
+                            <ImageView
+                                android:layout_width="@dimen/px_20.0_dp"
+                                android:layout_height="@dimen/px_20.0_dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/px_12.0_dp"
+                                android:src="@drawable/ic_arrow_forward_white_24dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.grocery.utils.lab.ShadowLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
